@@ -13,7 +13,7 @@ function Curriculo(props){
   const [apiClient, setExperiencia] = useState([]);
 
   const { isLoading, error, data ,isFetching} = useQuery( "datetime", () =>
-  axios.get('http://localhost:8080/experiencia').then((res) =>setExperiencia(res.data)
+  axios.get('https://springcurriculo.herokuapp.com/experiencia').then((res) =>setExperiencia(res.data)
   )  
 );
 

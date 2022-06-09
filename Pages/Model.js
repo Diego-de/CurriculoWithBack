@@ -13,14 +13,14 @@ export default function Model(props){
   });
 
   const Salvar = async (data) => {
-    const alterar = await axios.post("http://localhost:8080/experiencia", data)
+    const alterar = await axios.post("https://springcurriculo.herokuapp.com/experiencia", data)
     return alterar;
   }
 
   const {mutate} = useMutation(Salvar,{});
   
   return(
-    <SafeAreaView>
+    <SafeAreaView style={styles.container0}>
     <ImageBackground source={require('../img/fundo.jpg')} style={styles.image}>
       <View style={styles.container}>
         <View style={styles.subcontainer}>
@@ -53,6 +53,12 @@ export default function Model(props){
 }
 
 const styles = StyleSheet.create({
+  container0:{
+    flex:1,
+    flexDirection:'row',  
+    justifyContent: 'center',
+    textAlign:'center',
+  },
     container: {
       flex: 1,
       backgroundColor: '#E6E6FA',
